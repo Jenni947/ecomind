@@ -1,0 +1,318 @@
+
+/* =================================
+   ECOMINDI - IDENTIDADE VISUAL
+   ================================= */
+
+:root {
+    --green-dark: #103c2d;
+    --green-main: #1d704b;
+    --green-light: #e8f2eb;
+    --white: #ffffff;
+    --text: #24352d;
+    --text-light: #65736b;
+    --gold: #c6a66b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* NAVEGAÇÃO */
+
+header {
+    width: 100%;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+}
+
+.navbar {
+    max-width: 1200px;
+    min-height: 76px;
+    margin: auto;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--green-dark);
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+}
+
+.navbar a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--green-main);
+}
+
+/* BANNER PRINCIPAL */
+
+.hero {
+    min-height: 610px;
+    padding: 100px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 37, 27, 0.88),
+            rgba(8, 37, 27, 0.35)
+        ),
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+    color: var(--white);
+}
+
+.hero h2 {
+    max-width: 720px;
+    font-size: clamp(36px, 5vw, 62px);
+    line-height: 1.12;
+    margin-bottom: 25px;
+    letter-spacing: -1.5px;
+}
+
+.hero p {
+    max-width: 590px;
+    font-size: 18px;
+    color: #e6eee8;
+    margin-bottom: 35px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 28px;
+    background: var(--green-main);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.botao:hover {
+    background: #27875a;
+    transform: translateY(-3px);
+}
+
+/* SEÇÃO SOBRE */
+
+.sobre {
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 25px;
+    text-align: center;
+}
+
+.sobre h2,
+.projetos h2 {
+    color: var(--green-dark);
+    font-size: 34px;
+    margin-bottom: 22px;
+}
+
+.sobre p {
+    max-width: 780px;
+    margin: auto;
+    color: var(--text-light);
+    font-size: 17px;
+}
+
+/* ÁREAS DE ATUAÇÃO */
+
+.projetos {
+    padding: 90px 25px;
+    background: var(--green-light);
+    text-align: center;
+}
+
+.cards {
+    max-width: 1150px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    min-height: 310px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    color: var(--white);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 25px rgba(16, 60, 45, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(8, 35, 25, 0.92),
+        rgba(8, 35, 25, 0.05)
+    );
+}
+
+.card:nth-child(1) {
+    background-image: url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=85");
+}
+
+.card:nth-child(2) {
+    background-image: url("https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=85");
+}
+
+.card:nth-child(3) {
+    background-image: url("https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=900&q=85");
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card h3,
+.card p {
+    position: relative;
+    z-index: 1;
+}
+
+.card h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #edf4ef;
+    font-size: 15px;
+}
+
+/* CONTATO */
+
+.contato {
+    padding: 90px 25px;
+    text-align: center;
+    background: var(--green-dark);
+    color: var(--white);
+}
+
+.contato h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.contato p {
+    color: #d7e5dc;
+}
+
+/* RODAPÉ */
+
+footer {
+    padding: 22px;
+    background: #09291e;
+    color: #c8d8ce;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 75px 22px;
+        background-position: center;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+
+    .sobre,
+    .projetos {
+        padding: 65px 22px;
+    }
+
+    .sobre h2,
+    .projetos h2,
+    .contato h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .navbar ul {
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+}
