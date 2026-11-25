@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10291f">
+  <meta name="description" content="EcoMindi — tecnologia, biodiversidade e sustentabilidade.">
+  <title>EcoMindi | Tecnologia Ambiental</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+  <nav class="navbar container" aria-label="Navegação principal">
+    <a href="#inicio" class="logo">
+      <span class="logo-icon">✦</span>
+      EcoMindi<span class="logo-dot">.</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Abrir menu" aria-expanded="false">
+      ☰
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#inicio">Início</a>
+      <a href="#explorar">Explorar</a>
+      <a href="#especies">Biodiversidade</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#sobre">Sobre</a>
+    </div>
+
+    <a href="#explorar" class="nav-button">Explorar projeto ↗</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- INÍCIO -->
+  <section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <span class="eyebrow">
+        TECNOLOGIA • NATUREZA • CONHECIMENTO
+      </span>
+
+      <h1>
+        A tecnologia também pode
+        <span>proteger o futuro.</span>
+      </h1>
+
+      <p>
+        Um projeto digital dedicado à biodiversidade,
+        à sustentabilidade e ao desenvolvimento de
+        soluções tecnológicas para o meio ambiente.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#explorar" class="btn btn-primary">
+          Explorar EcoMindi →
+        </a>
+
+        <a href="#sobre" class="btn btn-outline">
+          Conhecer o projeto
+        </a>
+      </div>
+
+      <div class="hero-note">
+        <span class="status-dot"></span>
+        Projeto independente em desenvolvimento
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+      <span>01 / 04</span>
+      <span>CONHECIMENTO PARA UM FUTURO SUSTENTÁVEL</span>
+    </div>
+  </section>
+
+  <!-- EXPLORAR -->
+  <section class="section" id="explorar">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-label">PLATAFORMA</span>
+        <h2>Explore novas possibilidades.</h2>
+        <p>
+          Conhecimento ambiental organizado em experiências
+          digitais simples e acessíveis.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+
+        <a href="#especies" class="feature-card">
+          <div class="feature-icon">🌳</div>
+          <span class="feature-number">01</span>
+          <h3>Banco de espécies</h3>
+          <p>
+            Conheça espécies nativas, suas características
+            e sua importância ecológica.
+          </p>
+          <span class="card-link">Explorar espécies ↗</span>
+        </a>
+
+        <a href="#calculadora" class="feature-card">
+          <div class="feature-icon">♻️</div>
+          <span class="feature-number">02</span>
+          <h3>Impacto ambiental</h3>
+          <p>
+            Experimente uma ferramenta educativa para
+            compreender hábitos sustentáveis.
+          </p>
+          <span class="card-link">Abrir calculadora ↗</span>
+        </a>
+
+        <a href="#conhecimento" class="feature-card">
+          <div class="feature-icon">⌘</div>
+          <span class="feature-number">03</span>
+          <h3>Conhecimento digital</h3>
+          <p>
+            Descubra como tecnologia e informação
+            podem contribuir com a conservação.
+          </p>
+          <span class="card-link">Saiba mais ↗</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BIODIVERSIDADE -->
+  <section class="section species-section" id="especies">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-label">BIODIVERSIDADE BRASILEIRA</span>
+        <h2>Conheça nossa riqueza natural.</h2>
+        <p>
+          Uma pequena demonstração de catálogo digital
+          de espécies da flora brasileira.
+        </p>
+      </div>
+
+      <div class="search-area">
+        <input
+          type="search"
+          id="speciesSearch"
+          placeholder="Pesquisar uma espécie..."
+          aria-label="Pesquisar espécies"
+        >
+
+        <select id="speciesFilter" aria-label="Filtrar espécies">
+          <option value="todas">Todas as espécies</option>
+          <option value="arvore">Árvores</option>
+          <option value="frutifera">Frutíferas</option>
+        </select>
+      </div>
+
+      <div class="species-grid" id="speciesGrid">
+
+        <article class="species-card"
+          data-name="ipê-amarelo"
+          data-category="arvore">
+          <div class="species-visual visual-ipe">🌼</div>
+          <div class="species-info">
+            <span class="species-tag">ÁRVORE NATIVA</span>
+            <h3>Ipê-amarelo</h3>
+            <p><i>Handroanthus albus</i></p>
+            <p>
+              Árvore brasileira conhecida por sua floração
+              amarela e importância paisagística.
+            </p>
+          </div>
+        </article>
+
+        <article class="species-card"
+          data-name="ingá"
+          data-category="frutifera">
+          <div class="species-visual visual-inga">🌿</div>
+          <div class="species-info">
+            <span class="species-tag">FRUTÍFERA NATIVA</span>
+            <h3>Ingá</h3>
+            <p><i>Inga vera</i></p>
+            <p>
+              Espécie associada a ambientes úmidos
+              e importante para a fauna.
+            </p>
+          </div>
+        </article>
+
+        <article class="species-card"
+          data-name="angico"
+          data-category="arvore">
+          <div class="species-visual visual-angico">🌳</div>
+          <div class="species-info">
+            <span class="species-tag">ÁRVORE NATIVA</span>
+            <h3>Angico</h3>
+            <p><i>Anadenanthera colubrina</i></p>
+            <p>
+              Árvore nativa de grande relevância
+              ecológica em diferentes formações vegetais.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <p id="noResults" class="no-results" hidden>
+        Nenhuma espécie encontrada.
+      </p>
+
+      <p class="data-note">
+        Catálogo demonstrativo. As informações serão
+        ampliadas e revisadas durante o desenvolvimento.
+      </p>
+    </div>
+  </section>
+
+  <!-- CALCULADORA -->
+  <section class="section calculator-section" id="calculadora">
+    <div class="container calculator-layout">
+
+      <div>
+        <span class="section-label">FERRAMENTA EDUCATIVA</span>
+        <h2>Pequenas atitudes fazem diferença.</h2>
+        <p>
+          Experimente uma simulação educativa de consumo
+          de água. Informe seu consumo diário estimado
+          e descubra o resultado mensal.
+        </p>
+        <div class="calculator-note">
+          <span>ⓘ</span>
+          Esta ferramenta é uma simulação matemática,
+          não uma medição real do consumo.
+        </div>
+      </div>
+
+      <div class="calculator-card">
+        <h3>Simulador de consumo de água</h3>
+
+        <label for="waterInput">
+          Consumo estimado por dia (litros)
+        </label>
+
+        <input
+          type="number"
+          id="waterInput"
+          min="0"
+          max="10000"
+          value="150"
+          placeholder="Ex.: 150"
+        >
+
+        <button class="btn btn-primary calculate-button"
+          id="calculateButton">
+          Calcular consumo
+        </button>
+
+        <div class="result-area" aria-live="polite">
+          <span>Consumo estimado em 30 dias</span>
+          <strong id="waterResult">4.500 litros</strong>
+          <p id="waterMessage">
+            Informe seu consumo para realizar a simulação.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONHECIMENTO -->
+  <section class="section" id="conhecimento">
+    <div class="container knowledge-layout">
+
+      <div class="knowledge-mark">E.</div>
+
+      <div>
+        <span class="section-label">TECNOLOGIA COM PROPÓSITO</span>
+        <h2>Conhecimento conectado à inovação.</h2>
+        <p>
+          O EcoMindi explora o potencial das ferramentas
+          digitais para organizar informações ambientais,
+          facilitar o aprendizado e aproximar pessoas
+          do conhecimento sobre a natureza.
+        </p>
+
+        <a href="#sobre" class="text-link">
+          Conheça a proposta do projeto →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section about-section" id="sobre">
+    <div class="container about-layout">
+
+      <div>
+        <span class="section-label">SOBRE O PROJETO</span>
+        <h2>Uma construção baseada em tecnologia e conhecimento.</h2>
+      </div>
+
+      <div>
+        <p>
+          EcoMindi é um projeto independente de desenvolvimento
+          de software que busca explorar a conexão entre
+          tecnologia, biodiversidade e sustentabilidade.
+        </p>
+
+        <p>
+          Seu desenvolvimento envolve programação,
+          organização de dados, experiência do usuário
+          e pesquisa sobre questões ambientais.
+        </p>
+
+        <div class="tech-list">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>GitHub</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <a href="#inicio" class="logo footer-logo">
+      <span class="logo-icon">✦</span>
+      EcoMindi<span class="logo-dot">.</span>
+    </a>
+
+    <p>
+      Tecnologia, biodiversidade e conhecimento.
+    </p>
+
+    <span>
+      © <span id="year"></span> EcoMindi.
+      Projeto independente.
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
