@@ -208,4 +208,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log("EcoMindi 2.0 iniciado com sucesso!");
 
-});.
+});
